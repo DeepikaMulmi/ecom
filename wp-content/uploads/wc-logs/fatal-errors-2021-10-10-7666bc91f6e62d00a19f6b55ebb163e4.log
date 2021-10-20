@@ -1,0 +1,54 @@
+2021-10-10T06:20:29+00:00 CRITICAL Uncaught TypeError: array_column(): Argument #1 ($array) must be of type array, string given in D:\xampp\htdocs\racecommerce\wp-content\plugins\woocommerce\packages\woocommerce-admin\src\RemoteInboxNotifications\Transformers\ArrayColumn.php:27
+Stack trace:
+#0 D:\xampp\htdocs\racecommerce\wp-content\plugins\woocommerce\packages\woocommerce-admin\src\RemoteInboxNotifications\Transformers\ArrayColumn.php(27): array_column('', 'slug')
+#1 D:\xampp\htdocs\racecommerce\wp-content\plugins\woocommerce\packages\woocommerce-admin\src\RemoteInboxNotifications\TransformerService.php(59): Automattic\WooCommerce\Admin\RemoteInboxNotifications\Transformers\ArrayColumn->transform('', Object(stdClass), '')
+#2 D:\xampp\htdocs\racecommerce\wp-content\plugins\woocommerce\packages\woocommerce-admin\src\RemoteInboxNotifications\OptionRuleProcessor.php(45): Automattic\WooCommerce\Admin\RemoteInboxNotifications\TransformerService::apply('', Array, '')
+#3 D:\xampp\htdocs\racecommerce\wp-content\plugins\woocommerce\packages\woocommerce-admin\src\RemoteInboxNotifications\RuleEvaluator.php(47): Automattic\WooCommerce\Admin\RemoteInboxNotifications\OptionRuleProcessor->process(Object(stdClass), NULL)
+#4 D:\xampp\htdocs\racecommerce\wp-content\plugins\woocommerce\packages\woocommerce-admin\src\Features\RemoteFreeExtensions\EvaluateExtension.php(26): Automattic\WooCommerce\Admin\RemoteInboxNotifications\RuleEvaluator->evaluate(Array)
+#5 D:\xampp\htdocs\racecommerce\wp-content\plugins\woocommerce\packages\woocommerce-admin\src\Features\RemoteFreeExtensions\Init.php(41): Automattic\WooCommerce\Admin\Features\RemoteFreeExtensions\EvaluateExtension::evaluate(Object(stdClass))
+#6 D:\xampp\htdocs\racecommerce\wp-content\plugins\woocommerce\packages\woocommerce-admin\src\API\OnboardingFreeExtensions.php(75): Automattic\WooCommerce\Admin\Features\RemoteFreeExtensions\Init::get_extensions()
+#7 D:\xampp\htdocs\racecommerce\wp-includes\rest-api\class-wp-rest-server.php(1140): Automattic\WooCommerce\Admin\API\OnboardingFreeExtensions->get_available_extensions(Object(WP_REST_Request))
+#8 D:\xampp\htdocs\racecommerce\wp-includes\rest-api\class-wp-rest-server.php(987): WP_REST_Server->respond_to_request(Object(WP_REST_Request), '/wc-admin/onboa...', Array, NULL)
+#9 D:\xampp\htdocs\racecommerce\wp-includes\rest-api\class-wp-rest-server.php(414): WP_REST_Server->dispatch(Object(WP_REST_Request))
+#10 D:\xampp\htdocs\racecommerce\wp-includes\rest-api.php(370): WP_REST_Server->serve_request('/wc-admin/onboa...')
+#11 D:\xampp\htdocs\racecommerce\wp-includes\class-wp-hook.php(303): rest_api_loaded(Object(WP))
+#12 D:\xampp\htdocs\racecommerce\wp-includes\class-wp-hook.php(327): WP_Hook->apply_filters(NULL, Array)
+#13 D:\xampp\htdocs\racecommerce\wp-includes\plugin.php(518): WP_Hook->do_action(Array)
+#14 D:\xampp\htdocs\racecommerce\wp-includes\class-wp.php(388): do_action_ref_array('parse_request', Array)
+#15 D:\xampp\htdocs\racecommerce\wp-includes\class-wp.php(750): WP->parse_request('')
+#16 D:\xampp\htdocs\racecommerce\wp-includes\functions.php(1291): WP->main('')
+#17 D:\xampp\htdocs\racecommerce\wp-blog-header.php(16): wp()
+#18 D:\xampp\htdocs\racecommerce\index.php(17): require('D:\\xampp\\htdocs...')
+#19 {main}
+  thrown in D:\xampp\htdocs\racecommerce\wp-content\plugins\woocommerce\packages\woocommerce-admin\src\RemoteInboxNotifications\Transformers\ArrayColumn.php on line 27
+
+2021-10-10T07:05:50+00:00 CRITICAL Uncaught Exception: Invalid post. in D:\xampp\htdocs\racecommerce\wp-content\plugins\elementor\core\settings\page\manager.php:101
+Stack trace:
+#0 D:\xampp\htdocs\racecommerce\wp-content\plugins\elementor\core\base\document.php(1493): Elementor\Core\Settings\Page\Manager->ajax_before_save_settings(Array, NULL)
+#1 D:\xampp\htdocs\racecommerce\wp-content\plugins\elementor\core\base\document.php(698): Elementor\Core\Base\Document->save_settings(Array)
+#2 D:\xampp\htdocs\racecommerce\wp-content\plugins\elementor\core\kits\manager.php(236): Elementor\Core\Base\Document->update_settings(Array)
+#3 D:\xampp\htdocs\racecommerce\wp-content\plugins\elementor\core\kits\manager.php(398): Elementor\Core\Kits\Manager->update_kit_settings_based_on_option('site_descriptio...', '')
+#4 D:\xampp\htdocs\racecommerce\wp-includes\class-wp-hook.php(305): Elementor\Core\Kits\Manager->Elementor\Core\Kits\{closure}('Just another Wo...', '')
+#5 D:\xampp\htdocs\racecommerce\wp-includes\class-wp-hook.php(327): WP_Hook->apply_filters('', Array)
+#6 D:\xampp\htdocs\racecommerce\wp-includes\plugin.php(470): WP_Hook->do_action(Array)
+#7 D:\xampp\htdocs\racecommerce\wp-includes\option.php(521): do_action('update_option_b...', 'Just another Wo...', '', 'blogdescription')
+#8 D:\xampp\htdocs\racecommerce\wp-includes\class-wp-customize-setting.php(658): update_option('blogdescription', '', true)
+#9 D:\xampp\htdocs\racecommerce\wp-includes\class-wp-customize-setting.php(684): WP_Customize_Setting->set_root_value('')
+#10 D:\xampp\htdocs\racecommerce\wp-includes\class-wp-customize-setting.php(540): WP_Customize_Setting->update('')
+#11 D:\xampp\htdocs\racecommerce\wp-includes\class-wp-customize-manager.php(3558): WP_Customize_Setting->save()
+#12 D:\xampp\htdocs\racecommerce\wp-includes\theme.php(3462): WP_Customize_Manager->_publish_changeset_values(1049)
+#13 D:\xampp\htdocs\racecommerce\wp-includes\class-wp-hook.php(303): _wp_customize_publish_changeset('publish', 'auto-draft', Object(WP_Post))
+#14 D:\xampp\htdocs\racecommerce\wp-includes\class-wp-hook.php(327): WP_Hook->apply_filters(NULL, Array)
+#15 D:\xampp\htdocs\racecommerce\wp-includes\plugin.php(470): WP_Hook->do_action(Array)
+#16 D:\xampp\htdocs\racecommerce\wp-includes\post.php(5098): do_action('transition_post...', 'publish', 'auto-draft', Object(WP_Post))
+#17 D:\xampp\htdocs\racecommerce\wp-includes\post.php(4368): wp_transition_post_status('publish', 'auto-draft', Object(WP_Post))
+#18 D:\xampp\htdocs\racecommerce\wp-includes\post.php(4570): wp_insert_post(Array, true, true)
+#19 D:\xampp\htdocs\racecommerce\wp-includes\class-wp-customize-manager.php(2960): wp_update_post(Array, true)
+#20 D:\xampp\htdocs\racecommerce\wp-includes\class-wp-customize-manager.php(2522): WP_Customize_Manager->save_changeset_post(Array)
+#21 D:\xampp\htdocs\racecommerce\wp-includes\class-wp-hook.php(303): WP_Customize_Manager->save('')
+#22 D:\xampp\htdocs\racecommerce\wp-includes\class-wp-hook.php(327): WP_Hook->apply_filters('', Array)
+#23 D:\xampp\htdocs\racecommerce\wp-includes\plugin.php(470): WP_Hook->do_action(Array)
+#24 D:\xampp\htdocs\racecommerce\wp-admin\admin-ajax.php(187): do_action('wp_ajax_customi...')
+#25 {main}
+  thrown in D:\xampp\htdocs\racecommerce\wp-content\plugins\elementor\core\settings\page\manager.php on line 101
+

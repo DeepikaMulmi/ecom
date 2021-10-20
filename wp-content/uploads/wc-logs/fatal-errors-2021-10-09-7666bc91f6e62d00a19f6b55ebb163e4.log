@@ -1,0 +1,23 @@
+2021-10-09T04:58:05+00:00 CRITICAL Maximum execution time of 600 seconds exceeded in D:\xampp\htdocs\racecommerce\wp-includes\wp-db.php on line 2056
+
+2021-10-09T08:32:20+00:00 CRITICAL Uncaught Exception: Invalid post. in D:\xampp\htdocs\racecommerce\wp-content\plugins\elementor\core\settings\page\manager.php:101
+Stack trace:
+#0 D:\xampp\htdocs\racecommerce\wp-content\plugins\elementor\core\base\document.php(1493): Elementor\Core\Settings\Page\Manager->ajax_before_save_settings(Array, NULL)
+#1 D:\xampp\htdocs\racecommerce\wp-content\plugins\elementor\core\base\document.php(698): Elementor\Core\Base\Document->save_settings(Array)
+#2 D:\xampp\htdocs\racecommerce\wp-content\plugins\elementor\core\kits\manager.php(236): Elementor\Core\Base\Document->update_settings(Array)
+#3 D:\xampp\htdocs\racecommerce\wp-content\plugins\elementor\core\kits\manager.php(394): Elementor\Core\Kits\Manager->update_kit_settings_based_on_option('site_name', '')
+#4 D:\xampp\htdocs\racecommerce\wp-includes\class-wp-hook.php(305): Elementor\Core\Kits\Manager->Elementor\Core\Kits\{closure}('race', '')
+#5 D:\xampp\htdocs\racecommerce\wp-includes\class-wp-hook.php(327): WP_Hook->apply_filters('', Array)
+#6 D:\xampp\htdocs\racecommerce\wp-includes\plugin.php(470): WP_Hook->do_action(Array)
+#7 D:\xampp\htdocs\racecommerce\wp-includes\option.php(521): do_action('update_option_b...', 'race', '', 'blogname')
+#8 D:\xampp\htdocs\racecommerce\wp-content\plugins\ocean-extra\includes\wizard\wizard.php(746): update_option('blogname', '')
+#9 D:\xampp\htdocs\racecommerce\wp-content\plugins\ocean-extra\includes\wizard\wizard.php(568): Ocean_Extra_Theme_Wizard->save_ocean_customize()
+#10 D:\xampp\htdocs\racecommerce\wp-content\plugins\ocean-extra\includes\wizard\wizard.php(368): Ocean_Extra_Theme_Wizard->ocean_customize_setup(Object(Ocean_Extra_Theme_Wizard))
+#11 D:\xampp\htdocs\racecommerce\wp-content\plugins\ocean-extra\includes\wizard\wizard.php(320): Ocean_Extra_Theme_Wizard->setup_wizard_content()
+#12 D:\xampp\htdocs\racecommerce\wp-includes\class-wp-hook.php(303): Ocean_Extra_Theme_Wizard->ocean_wizard_setup('')
+#13 D:\xampp\htdocs\racecommerce\wp-includes\class-wp-hook.php(327): WP_Hook->apply_filters(NULL, Array)
+#14 D:\xampp\htdocs\racecommerce\wp-includes\plugin.php(470): WP_Hook->do_action(Array)
+#15 D:\xampp\htdocs\racecommerce\wp-admin\admin.php(175): do_action('admin_init')
+#16 {main}
+  thrown in D:\xampp\htdocs\racecommerce\wp-content\plugins\elementor\core\settings\page\manager.php on line 101
+
